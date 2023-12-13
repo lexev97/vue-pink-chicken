@@ -1,0 +1,1 @@
+export { default as AddImgBtn } from './AddImgBtn.vue'

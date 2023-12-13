@@ -1,0 +1,1 @@
+export { default as DocsConvertIcon } from './DocsConvertIcon.vue'

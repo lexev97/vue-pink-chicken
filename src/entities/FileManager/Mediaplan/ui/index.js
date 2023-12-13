@@ -1,0 +1,1 @@
+export {default as Mediaplan} from './Mediaplan.vue';
