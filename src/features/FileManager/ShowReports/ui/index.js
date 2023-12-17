@@ -1,1 +1,0 @@
-export {default as ShowMediaplans} from './ShowMediaplans.vue'

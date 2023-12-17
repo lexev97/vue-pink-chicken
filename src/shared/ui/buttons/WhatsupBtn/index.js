@@ -1,1 +1,0 @@
-export { default as WhatsupBtn } from './WhatsupBtn.vue'

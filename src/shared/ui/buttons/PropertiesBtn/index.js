@@ -1,0 +1,1 @@
+export { default as PropertiesBtn } from './PropertiesBtn.vue'

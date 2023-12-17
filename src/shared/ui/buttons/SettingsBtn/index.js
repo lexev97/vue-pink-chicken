@@ -1,1 +1,1 @@
-export { default as SettingBtn } from './SettingBtn.vue'
+export { default as SettingsBtn } from './SettingsBtn.vue'

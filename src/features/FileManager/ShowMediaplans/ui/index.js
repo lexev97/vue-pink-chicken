@@ -1,1 +1,1 @@
-export {default as ShowMediaplans} from './ShowMediaplans.vue';
+export {default as ShowDocs} from './ShowDocs.vue';

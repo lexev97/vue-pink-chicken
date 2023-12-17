@@ -1,1 +1,0 @@
-export {default as HelperMessage} from './HelperMessage.vue';

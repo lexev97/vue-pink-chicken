@@ -1,0 +1,285 @@
+@use '../../app/styles/index.scss' as *;
+
+.messenger {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+
+    &__header {
+        display: flex;
+        width: 100%;
+        padding: 0 0 19px 0;
+        gap: 26px
+    }
+
+    &__header-wrapper {
+        width: 100%;
+        @include flex(row, space-between, center);
+    }
+
+    &__heading {
+        align-self: flex-start;
+        margin: 0;
+        padding: 0;
+        color: $black;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__manager {
+        @include flex();
+        gap: 10px;
+    }
+
+    &__manager-name {
+        margin: 0;
+        padding: 0;
+        color: $black;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__manager-email {
+        margin: 0;
+        padding: 0;
+        color: $darkGrey;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__prop-btn {
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    &__messages-area {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: $grey;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__is-loading {
+        text-align: center;
+        color: #525252;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+    }
+
+    &__dialog {
+        position: absolute;
+        margin: 20px 0 0 0;
+        width: 100%;
+        height: calc(100% - 160px);
+        overflow: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #b5b5b5;
+            border-radius: 54px;
+            height: 38px;
+
+        }
+    }
+
+    &__textarea {
+        margin: auto 0 0 0;
+        position: relative;
+        display: flex;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 144px;
+        width: 100%;
+        background-color: $white;
+        border-radius: 20px;
+        border: 2px solid $grey;
+    }
+
+    &__order-docs {
+        width: 100%;
+    }
+
+    &__no-messages {
+        padding: 30px 0 0 0;
+        @include flex(column, flex-start, center);
+    }
+
+    &__no-messages-text {
+        max-width: 470px;
+        margin: 20px 0 20px 0;
+        color: $black;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%;
+    }
+
+    &__text-input-area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%
+    }
+
+    &__text-input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        resize: none;
+        font-family: inherit;
+        padding: 0 10px 10px 0;
+
+        &::placeholder {
+            color: $darkGrey;
+            font-family: inherit;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%;
+        }
+    }
+
+    &__add-to-message {
+        @include flex(row, flex-start, flex-end);
+        gap: 20px;
+    }
+
+    &__add-file,
+    &__add-img {
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        padding: 0;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.9;
+        }
+    }
+
+    &__send-area {
+        @include flex(column, flex-end, center)
+    }
+
+    &__send-button {
+        width: 50px;
+        height: 50px;
+        background-color: $pink;
+    }
+
+    &__send-text {
+        margin: 3px 0 0 0;
+        color: $black;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .messenger {
+        min-height: 688px;
+
+        &__no-messages-pic {
+            width: 190px;
+            height: 190px;
+        }
+
+        &__no-messages-text {
+            max-width: 370px;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .messenger {
+        box-shadow: none;
+        padding: 0;
+        min-height: 730px;
+
+        &__header {
+            padding: 0 20px 19px 20px;
+            gap: 26px;
+            width: auto;
+            justify-content: space-between;
+        }
+
+        &__heading {
+            font-size: 20px;
+        }
+
+        &__header-wrapper {
+            width: auto;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        &__messages-area {
+            width: auto;
+            border-radius: 0;
+            padding: 30px 20px;
+        }
+
+        &__no-messages-pic {
+            width: auto;
+            height: 130px;
+        }
+
+        &__no-messages-text {
+            max-width: 271px;
+            font-size: 14px;
+        }
+
+        &__textarea {
+            border: 2px solid #EE26C2;
+        }
+
+        &__dialog {
+            margin: 0;
+            width: calc(100% - 40px);
+            height: calc(100% - 210px);
+        }
+
+        &__send-text {
+            display: none;
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+.order-docs {
+    bottom: calc(100% + 20px);
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+
+    &__mediaplan,
+    &__report {
+        display: flex;
+        padding: 12px 22px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 21px;
+        border: none;
+        cursor: pointer;
+        transition: filter 0.2s ease;
+        color: white;
+        font-family: inherit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        &:hover {
+            filter: grayscale(50%);
+        }
+
+        &:active {
+            filter: grayscale(10%);
+        }
+    }
+
+    &__mediaplan {
+        background-color: #EE26C2;
+    }
+
+    &__report {
+        background-color: #2676EE;
+    }
+}
+
+
+@media screen and (max-width: 765px) {
+    .order-docs {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        right: 16px;
+    }
+}

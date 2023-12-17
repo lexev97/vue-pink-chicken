@@ -1,0 +1,1 @@
+export {default as OrderDocs} from './OrderDocs.vue';

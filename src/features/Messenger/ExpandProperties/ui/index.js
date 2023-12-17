@@ -1,1 +1,0 @@
-export {default as ExpandProperties} from './ExpandProperties.vue';

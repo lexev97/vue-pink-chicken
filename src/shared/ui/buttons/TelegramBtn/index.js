@@ -1,1 +1,0 @@
-export { default as TelegramBtn } from './TelegramBtn.vue'

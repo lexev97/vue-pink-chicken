@@ -1,0 +1,1 @@
+export {default as ManagerMessage} from './ManagerMessage.vue';

@@ -1,0 +1,149 @@
+@use '../../app/styles/index.scss' as *;
+
+.file-manager {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: $white;
+    height: 100%;
+    max-width: 295px;
+    width: 100%;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 0;
+
+    &__heading {
+        margin: 30px 20px 30px 20px;
+        padding: 0;
+        color: $black;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__nofiles,
+    &__files {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 120px);
+        @include flex(column, flex-start, center);
+        overflow: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #b5b5b5;
+            border-radius: 54px;
+            height: 38px;
+
+        }
+    }
+
+    &__files {
+        gap: 32px;
+    }
+
+
+    &__nofiles-pic {
+        margin: 16px 0 0 0;
+        height: 315px;
+        width: auto;
+    }
+
+    &__nofiles-text {
+        padding: 0;
+        margin: 30px 0 0 0;
+        text-align: center;
+        color: $black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%;
+    }
+
+}
+
+.file-manager-small {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .file-manager {
+        min-height: 405px;
+        max-width: none;
+
+        &__nofiles {
+            @include flex(row, center, flex-start);
+        }
+
+        &__nofiles-pic {
+            margin: 0;
+            height: 247px;
+            width: auto;
+        }
+
+        &__nofiles-text {
+            margin: auto 0 auto 40px;
+            padding: 0;
+            max-width: 255px;
+            text-align: left;
+        }
+
+        &__files {
+            @include flex(row, center, flex-start);
+            gap: 20px;
+        }
+    }
+
+    @media screen and (max-width: 765px) {
+        .file-manager {
+            display: none;
+        }
+
+        .file-manager-small {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 20px 10px 20px;
+            @include flex(row, flex-start, center);
+            gap: 12px;
+
+            &__media,
+            &__reports {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                padding: 12px;
+                border-radius: 4px;
+                background: #CBCBCB;
+
+                svg {
+                    margin: 0 0 0 13px;
+                }
+            }
+
+            &__media:active {
+                background-color: $white;
+                border: 1px solid #EE26C2;
+            }
+
+            &__reports:active {
+                background-color: $white;
+                border: 1px solid #2676EE;
+            }
+
+        }
+    }
+}

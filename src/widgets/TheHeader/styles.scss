@@ -1,0 +1,171 @@
+@use "../../app/styles/index.scss" as *;
+
+.header {
+    width: 100%;
+
+    &__wrapper {
+        box-sizing: border-box;
+        @include flex(row, space-between, center);
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 34px 40px;
+    }
+
+    &__logo {
+        width: 219px;
+        height: 32px;
+        background-image: url(../../shared/assets/images/SVG/logo-color.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &__menu {
+        @include flex();
+        gap: 26px;
+    }
+
+    &__user-wrapper {
+        @include flex();
+        gap: 26px;
+    }
+
+    &__revenue-area {
+        @include flex();
+        gap: 8px;
+    }
+
+    &__user-area {
+        @include flex();
+        gap: 10px;
+    }
+
+    &__revenue-text,
+    &__user-text {
+        padding: 0;
+        margin: 0;
+        color: $black;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        span {
+            display: none;
+        }
+    }
+
+    &__revenue-icon,
+    &__user-icon {
+        @include flex();
+        width: 40px;
+        height: 40px;
+        background-color: $pink;
+        border-radius: 50%;
+    }
+
+    &__settings-wrapper {
+        @include flex();
+        gap: 12px;
+    }
+
+    &__logout-btn,
+    &__settings-btn {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $grey;
+
+        }
+
+        &:active {
+            background-color: $pink;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .header {
+        &__user-wrapper {
+            gap: 20px;
+        }
+
+        &__menu {
+            gap: 20px;
+        }
+
+        &__logo {
+            width: 209px;
+            height: 29px;
+        }
+
+        &__revenue-text,
+        &__user-text {
+            font-size: 16px;
+        }
+
+        &__logout-btn,
+        &__settings-btn {
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:active {
+                background-color: $pink;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .header {
+        &__wrapper {
+            @include flex(column, flex-start, flex-start);
+            padding: 28px 20px 20px 20px;
+            gap: 20px;
+        }
+
+        &__logo {
+            width: 168px;
+            height: 24px;
+        }
+
+        &__menu {
+            @include flex(row, space-between, flex-start);
+            width: 100%;
+        }
+
+        &__user-wrapper {
+            @include flex(column-reverse, flex-start, flex-start);
+            gap: 4px;
+            ;
+        }
+
+        &__revenue-icon,
+        &__user-icon {
+            display: none;
+        }
+
+        &__revenue-text {
+            color: #797979;
+            font-size: 12px;
+            font-weight: 500;
+
+            span {
+                display: inline;
+            }
+        }
+
+        &__user-text {
+            font-size: 14px;
+        }
+
+    }
+
+}

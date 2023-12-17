@@ -1,0 +1,63 @@
+.manager-message {
+    display: flex;
+    justify-content: flex-start;
+    gap: 13px;
+
+    &__pic {
+        flex-shrink: 0;
+        width: 49px;
+        height: 49px;
+        background-image: url(../../../../shared/assets/images/PNG/jim.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &__message {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 541px;
+    }
+
+    &__text {
+        margin: 0;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%;
+        padding: 16px 22px;
+        border-radius: 12px;
+        background: #FFF;
+    }
+
+    &__sign {
+        margin: 0;
+        color: #525252;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+
+        span {
+            color: #000;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .manager-message {
+
+        &__message {
+            max-width: 454px;
+        }
+    }
+}

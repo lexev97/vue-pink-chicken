@@ -1,0 +1,23 @@
+.dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+
+    &__timestamp {
+        margin: 30px 0 25px 0;
+        text-align: center;
+    }
+
+    &__message {
+        padding: 0 0 11px 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .dialog {
+        &__timestamp {
+            margin: 20px 0 25px 0;
+        }
+    }
+}

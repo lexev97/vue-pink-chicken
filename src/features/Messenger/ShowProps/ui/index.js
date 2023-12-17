@@ -1,0 +1,1 @@
+export {default as ShowProps} from './ShowProps.vue';
