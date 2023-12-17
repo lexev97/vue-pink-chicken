@@ -1,24 +1,50 @@
-# vue-pink-chicken
+# PinkChicken App
 
-## Project setup
+### Обзор
+
+- [Описание](#описание)
+- [Стек](#стек)
+- [Развертывание](#развертывание)
+- [Планируемые дополнения](#планируемые-дополнения)
+- [Сайт](#сайт)
+
+<br>
+
+## Описание
+
+Мессенджер для решения ворсов клиента и формирования отчетных документов.
+Кнопки "заказать медиаплан", "заказать отчет", "Enter" отправляют асинхронный запрос и выводять результат в поле чата или поле файлового менеджера.
+
+## Стек
+- Vue 3
+- JavaScript
+- FSD
+- SCSS/LESS
+- Адаптивная верстка
+
+## Развертывание
+
+Для копирования и запуска приложения Вам потребуются [Git](https://git-scm.com/) и [Node.js](https://nodejs.org/en/download/) (вместе с которым автоматически устанавливается менеджер пакетов [npm](http://npmjs.com/)) предварительно установленные на компьютер.
+
+Далее пишем в командной строке следующие команды:
+
 ```
-npm install
+// Клонирование репозитория
+$ git clone https://github.com/lexev97/vue-pink-chicken.git
+
+// Переход в директорию с frontend частью проекта
+$ cd vue-pink-chicken
+
+// Установка зависимостей
+$ npm install
+
+// Запуск проекта
+$ npm start
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Планируемые дополнения
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Добавление второго языка
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Ссылка на приложение.
+https://sobakens.netlify.app/
