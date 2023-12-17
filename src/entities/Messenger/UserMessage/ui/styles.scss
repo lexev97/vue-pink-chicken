@@ -36,3 +36,12 @@
         max-width: 454px;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .user-message {
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
