@@ -47,4 +47,4 @@ $ npm start
 - Добавление второго языка
 
 ## Ссылка на приложение.
-https://sobakens.netlify.app/
+https://pink-chicken.netlify.app
